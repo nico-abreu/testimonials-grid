@@ -1,0 +1,155 @@
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --text-color-dark:rgb(109, 109, 109) ;
+    --text-color-ligth:rgb(192, 190, 190) ;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Light-gray);
+
+}
+.main{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    max-width: 1450px;
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+    grid-template-areas:
+    "card-purple"
+    "card-Gray"
+    "card-white-1"
+    "card-dark-blue"
+    "card-white-2";
+}
+
+.main__card{
+    border-radius: 10px;
+    max-width: 377px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main__img-card1{
+    width: 119px;
+    position: absolute;
+    right: 30px;
+}
+
+.main__description-container,
+.main__tittle-container,
+.main__header{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main__header{
+    margin: 20px auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.main__img{
+    border-radius: 50%;
+    width: 40px;
+    height:40px;
+    border: 2px solid var(--Light-gray);
+    margin-right: 15px;
+}
+
+.main__name{
+    margin-bottom:5px;
+    color: var(--White);
+    font-weight: 500;  
+}
+
+.main__profetion{
+    font-size: 13px;
+    color: var(--text-color-ligth) ;
+}
+
+.main__tittle-container{
+    position: relative;
+    color: var(--White);
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.main__description-container{
+    margin-bottom: 35px;
+    color: var(--text-color-ligth) ;
+    line-height: 23px;
+}
+
+.main__card1{
+    background-color: var(--Moderate-violet);
+    grid-area: card-purple;
+}
+
+.main__card2{
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area:card-Gray;
+}
+
+.main__card3{
+    grid-area: card-white-1;
+}
+
+.main__card3,
+.main__card5{
+    background-color: var(--White);
+}
+
+.main__card4{
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: card-dark-blue;
+}
+
+.main__card5{
+    grid-area: card-white-2;
+}
+
+.main__name--color,
+.main__tittle-container--color{
+    color: black;
+}
+
+.main__profetion--color,
+.main__description-container--color{
+    color: var(--text-color-dark);
+
+}
+
+
+
+@media (min-width: 1250px){
+
+ 
+
+    .main{
+        grid-template-columns: repeat(8, 1fr);
+        gap: 40px;
+        grid-template-areas:
+        "card-purple card-purple card-purple card-purple card-Gray card-Gray card-white-2 card-white-2"
+        "card-purple card-purple card-purple card-purple card-Gray card-Gray card-white-2 card-white-2"
+        "card-white-1 card-white-1 card-dark-blue card-dark-blue card-dark-blue card-dark-blue card-white-2 card-white-2"
+        "card-white-1 card-white-1 card-dark-blue card-dark-blue card-dark-blue card-dark-blue card-white-2 card-white-2";
+    }
+
+    .main__card{
+      
+        max-width: 1440px;
+      
+    }
+}
